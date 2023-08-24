@@ -1,0 +1,377 @@
+name: Emerald
+version: 2
+projectReferences: 
+  - /Emerald-UI-Tests
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Emerald/src
+        type: javaClasspath
+  - name: 'Compound Tests'
+    resources: 
+      - name: AddToCheckout.testsuite
+        type: com.ibm.rational.test.lt.scenario
+        version: 10.5.3.0
+        properties: 
+          description: 'Test(s): 
+
+	01_Login
+
+	02_Add Item to basket
+
+	03_Checkout item
+
+	04_LogOut
+
+'
+          name: AddToCheckout
+          type: com.ibm.rational.test.common.schedule.ScenarioTestsuite
+          uid: A1EE4228F3783310FFA8E33265653735
+        dependencies: 
+          - path: /Emerald/Tests/01_Login.testsuite
+            type: scheduleInvokedTest
+          - path: '/Emerald/Tests/02_Add Item to basket.testsuite'
+            type: scheduleInvokedTest
+          - path: '/Emerald/Tests/03_Checkout item.testsuite'
+            type: scheduleInvokedTest
+          - path: /Emerald/Tests/04_LogOut.testsuite
+            type: scheduleInvokedTest
+  - name: Datasets
+    resources: 
+  - name: 'JMeter Tests'
+    resources: 
+  - name: Locations
+    resources: 
+  - name: Results
+    resources: 
+      - name: 01_Login_1692844786370.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692844786370
+          tags: 
+          testId: A1EDFED047923410FCBDE43139653531
+          testName: 01_Login
+        dependencies: 
+          - path: /Emerald/Results/01_Login_1692844786370.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/01_Login_1692844786370_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844786370_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844786370_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844786370_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844787138.executiondlr
+            type: statsSessionAsset
+          - path: /Emerald/Tests/01_Login.testsuite
+            type: statsSessionTest
+      - name: 01_Login_1692844786370.xmoebreport
+      - name: 01_Login_1692844786370_orch!system.mstats
+      - name: 01_Login_1692844786370_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692844786370_perf!localhost.mstats
+      - name: 01_Login_1692844786370_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692844787138.executiondlr
+      - name: 01_Login_1692844920922.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692844920922
+          tags: 
+          testId: A1EDFED047923410FCBDE43139653531
+          testName: 01_Login
+        dependencies: 
+          - path: /Emerald/Results/01_Login_1692844920922.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/01_Login_1692844920922_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844920922_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844920922_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844920922_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692844921399.executiondlr
+            type: statsSessionAsset
+          - path: /Emerald/Tests/01_Login.testsuite
+            type: statsSessionTest
+      - name: 01_Login_1692844920922.xmoebreport
+      - name: 01_Login_1692844920922_orch!system.mstats
+      - name: 01_Login_1692844920922_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692844920922_perf!localhost.mstats
+      - name: 01_Login_1692844920922_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692844921399.executiondlr
+      - name: 01_Login_1692845047851.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692845047851
+          tags: 
+          testId: A1EDFED047923410FCBDE43139653531
+          testName: 01_Login
+        dependencies: 
+          - path: /Emerald/Results/01_Login_1692845047851.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/01_Login_1692845047851_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845047851_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845047851_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845047851_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845048346.executiondlr
+            type: statsSessionAsset
+          - path: /Emerald/Tests/01_Login.testsuite
+            type: statsSessionTest
+      - name: 01_Login_1692845047851.xmoebreport
+      - name: 01_Login_1692845047851_orch!system.mstats
+      - name: 01_Login_1692845047851_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692845047851_perf!localhost.mstats
+      - name: 01_Login_1692845047851_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692845048346.executiondlr
+      - name: 01_Login_1692845266400.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692845266400
+          tags: 
+          testId: A1EDFED047923410FCBDE43139653531
+          testName: 01_Login
+        dependencies: 
+          - path: /Emerald/Results/01_Login_1692845266400.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/01_Login_1692845266400_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845266400_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845266400_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845266400_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/01_Login_1692845266894.executiondlr
+            type: statsSessionAsset
+          - path: /Emerald/Tests/01_Login.testsuite
+            type: statsSessionTest
+      - name: 01_Login_1692845266400.xmoebreport
+      - name: 01_Login_1692845266400_orch!system.mstats
+      - name: 01_Login_1692845266400_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692845266400_perf!localhost.mstats
+      - name: 01_Login_1692845266400_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: 01_Login_1692845266894.executiondlr
+      - name: AddToCheckout_1692845433213.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692845433213
+          tags: 
+          testId: A1EE4228F3783310FFA8E33265653735
+          testName: AddToCheckout
+        dependencies: 
+          - path: '/Emerald/Compound Tests/AddToCheckout.testsuite'
+            type: statsSessionTest
+          - path: /Emerald/Results/AddToCheckout_1692845433213.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/AddToCheckout_1692845433213_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845433213_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845433213_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845433213_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845433666.executiondlr
+            type: statsSessionAsset
+      - name: AddToCheckout_1692845433213.xmoebreport
+      - name: AddToCheckout_1692845433213_orch!system.mstats
+      - name: AddToCheckout_1692845433213_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845433213_perf!localhost.mstats
+      - name: AddToCheckout_1692845433213_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845433666.executiondlr
+      - name: AddToCheckout_1692845757369.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692845757369
+          tags: 
+          testId: A1EE4228F3783310FFA8E33265653735
+          testName: AddToCheckout
+        dependencies: 
+          - path: '/Emerald/Compound Tests/AddToCheckout.testsuite'
+            type: statsSessionTest
+          - path: /Emerald/Results/AddToCheckout_1692845757369.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/AddToCheckout_1692845757369_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845757369_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845757369_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845757369_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845757810.executiondlr
+            type: statsSessionAsset
+      - name: AddToCheckout_1692845757369.xmoebreport
+      - name: AddToCheckout_1692845757369_orch!system.mstats
+      - name: AddToCheckout_1692845757369_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845757369_perf!localhost.mstats
+      - name: AddToCheckout_1692845757369_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845757810.executiondlr
+      - name: AddToCheckout_1692845925485.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692845925485
+          tags: 
+          testId: A1EE4228F3783310FFA8E33265653735
+          testName: AddToCheckout
+        dependencies: 
+          - path: '/Emerald/Compound Tests/AddToCheckout.testsuite'
+            type: statsSessionTest
+          - path: /Emerald/Results/AddToCheckout_1692845925485.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/AddToCheckout_1692845925485_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845925485_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845925485_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845925485_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692845925926.executiondlr
+            type: statsSessionAsset
+      - name: AddToCheckout_1692845925485.xmoebreport
+      - name: AddToCheckout_1692845925485_orch!system.mstats
+      - name: AddToCheckout_1692845925485_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845925485_perf!localhost.mstats
+      - name: AddToCheckout_1692845925485_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692845925926.executiondlr
+      - name: AddToCheckout_1692846454807.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1692846454807
+          tags: 
+          testId: A1EE4228F3783310FFA8E33265653735
+          testName: AddToCheckout
+        dependencies: 
+          - path: '/Emerald/Compound Tests/AddToCheckout.testsuite'
+            type: statsSessionTest
+          - path: /Emerald/Results/AddToCheckout_1692846454807.xmoebreport
+            type: statsSessionAsset
+          - path: /Emerald/Results/AddToCheckout_1692846454807_orch!system.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692846454807_orch!system.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692846454807_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692846454807_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /Emerald/Results/AddToCheckout_1692846455255.executiondlr
+            type: statsSessionAsset
+      - name: AddToCheckout_1692846454807.xmoebreport
+      - name: AddToCheckout_1692846454807_orch!system.mstats
+      - name: AddToCheckout_1692846454807_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692846454807_perf!localhost.mstats
+      - name: AddToCheckout_1692846454807_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: AddToCheckout_1692846455255.executiondlr
+  - name: Schedules
+    resources: 
+  - name: Tests
+    resources: 
+      - name: 01_Login-add.recdata
+      - name: 01_Login-add.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Emerald/Tests/01_Login-add.recdata
+            type: recsessionRecdata
+      - name: 01_Login.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDFED047923410FCBDE43139653531
+        dependencies: 
+          - path: /Emerald/hclsofy_com_d08.ma
+            type: test#moeb.applicationPackage
+      - name: '02_Add Item to basket.testsuite'
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDFED12CFE0BFDFCBDE43139653531
+        dependencies: 
+          - path: /Emerald/hclsofy_com_d08.ma
+            type: test#moeb.applicationPackage
+      - name: '03_Checkout item.testsuite'
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDFED13937EE03FCBDE43139653531
+        dependencies: 
+          - path: /Emerald/hclsofy_com_d08.ma
+            type: test#moeb.applicationPackage
+      - name: 04_LogOut.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EDFED14D91BCD5FCBDE43139653531
+        dependencies: 
+          - path: /Emerald/hclsofy_com_d08.ma
+            type: test#moeb.applicationPackage
+      - name: Demo.recdata
+      - name: Demo.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Emerald/Tests/Demo.recdata
+            type: recsessionRecdata
+      - name: Emeralddemo.recdata
+      - name: Emeralddemo.recsession
+        type: com.ibm.rational.test.lt.recsession
+        dependencies: 
+          - path: /Emerald/Tests/Emeralddemo.recdata
+            type: recsessionRecdata
+      - name: Emeralddemo.testsuite
+        type: com.ibm.rational.test.lt.test
+        version: 10.5.3.0
+        properties: 
+          features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+          type: com.ibm.rational.test.lt.lttest
+          uid: A1EE422ADCBB0DD0FFA8E33265653735
+        dependencies: 
+          - path: /Emerald/Tests/Emeralddemo.recsession
+            type: testRecsession
+          - path: /Emerald/hclsofy_com_d08.ma
+            type: test#moeb.applicationPackage
+  - name: hclsofy_com_d08.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+      - name: test
+        resources: 
+          - name: AddToCheckout_CompoundTest_A1EE4228F3783310FFA8E33265653735.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: C01_Login_Test_A1EDFED047923410FCBDE43139653531.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: C02_AddItemToBasket_Test_A1EDFED12CFE0BFDFCBDE43139653531.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: C03_CheckoutItem_Test_A1EDFED13937EE03FCBDE43139653531.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: C04_LogOut_Test_A1EDFED14D91BCD5FCBDE43139653531.java
+            type: com.ibm.rational.test.lt.generatedCode
